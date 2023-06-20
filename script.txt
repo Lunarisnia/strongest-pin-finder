@@ -1,2 +1,32 @@
 Title: PIN HP Apa yang paling susah di hack?
 
+Jadi gw abis nonton Oshi no ko, good show, watch it.
+Tapi itu nanti dulu, jadi ada scene dimana karakter utamanya, Aqua
+berusaha ngecrack PIN Number HP ibunya, dan metode yang dia pake itu
+metode brute force, dimana dia nyoba semua kombinasi angka dari 000_000 sampe
+999_999, di animenya Aqua butuh bertahun-tahun buat ngecrack HP itu karena
+hp ibunya punya security measure dimana setiap 3x salah biasanya
+hp-nya di lock selama 30detik.
+
+Dari scene itu gw kepikiran, kira-kira apa sih 6 Angka PIN yang paling lama
+buat di crack kayak gitu, untuk ngelakuin itu hal yang kepikiran di otak gw itu
+adalah ngelakuin simulasi untuk ngecoba crack 1jt PIN dengan cara brute force.
+maka langsung gas buka VSCODE gw. Untuk ngesimulate ini gw bakal pake golang,
+kenapa? karena Golang punya sesuatu yang namanya goroutine yang bikin kita possible
+buat ngejalanin banyak proses bersamaan, guna-nya apa diexperiment ini? jadi kita kan
+pengen ngecrack 1jt PIN, ga mungkin kita ngelakuin itu 1-1, bakal
+lambat banget itu, so instead kita pake goroutine untuk ngelakuin crack semua crack itu
+sekaligus bersamaan, lu bisa bayangin kayak kalo lu ngebayar 1jt orang dan masing2 ditugasin
+untuk ngecrack 1 pin sampe ketemu, kemudian nyatet hasilnya. 
+
+tapi kalo kita cuma ngecrack dari 1 arah kayak dari 000_000 ke 999_999, tentunya
+yang paling lama itu ya 999_999, tapi itu ga valid karna kalo misalkan si hacker
+kepikiran buat ngecrack dari atas kebawah 999_999 itu ke crack secara instant,
+jadi simulasi gw juga bakalan simulate cracking dari atas ke bawah. Kalo gitu
+mungkin lu bakal kepikiran berarti PIN yang paling lama di crack itu yang ditengah dong
+kayak 555_555 dll, mungkin iya, tapi 555_555 itu kan walaupun mungkin lama dicrack, tapi
+gampang ditebak ya, ga adil kitabilang 555_555 itu password paling strong cuma karna lama di crack
+dari atas/bawah. Kalo gitu kita perlu mekanisme buat nge rating PIN yang gampang ditebak sama susah.
+
+Tapi apa sih yang ngebuat PIN itu gampang ditebak? Ini subjective banget sih ya,
+Continue here to explain what is my criteria for easy to guess password 
